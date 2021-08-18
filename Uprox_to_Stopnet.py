@@ -61,6 +61,7 @@ def chekinputStopnet():
 
 
 def converttostopnetHEX():
+    print('converttostopnetHEX')
     statusEntry.delete(0, END)
     stopNetCodeEntryHEX.delete(0, END)
     stopNetCodeEntryDEC.delete(0, END)
@@ -69,7 +70,9 @@ def converttostopnetHEX():
         data = uproxCodeEntryHEX.get()
         databin = int(data, 16)
         databin2 = bin(databin)
-        print(data, databin, databin2)
+        print(data)
+        print(databin)
+        print(databin2)
         uproxCodeEntryDEC.delete(0, END)
         uproxCodeEntryDEC.insert(0, databin)
         mass = list(databin2)
@@ -177,6 +180,7 @@ def converttostopnetHEX():
 
 
 def converttouproxHEX():
+    print('converttouproxHEX')
     statusEntry.delete(0, END)
     uproxCodeEntryHEX.delete(0, END)
     uproxCodeEntryDEC.delete(0, END)
@@ -185,7 +189,9 @@ def converttouproxHEX():
         data = stopNetCodeEntryHEX.get()
         databin = int(data, 16)
         databin2 = bin(databin)
-        print(data, databin, databin2)
+        print(data)
+        print(databin)
+        print(databin2)
         stopNetCodeEntryDEC.delete(0, END)
         stopNetCodeEntryDEC.insert(0, databin)
         mass = list(databin2)
@@ -293,6 +299,7 @@ def converttouproxHEX():
 
 
 def converttostopnetDEC():
+    print('converttostopnetDEC')
     statusEntry.delete(0, END)
     stopNetCodeEntryHEX.delete(0, END)
     stopNetCodeEntryDEC.delete(0, END)
@@ -304,7 +311,9 @@ def converttostopnetDEC():
         databin2 = bin(databin)
         uproxCodeEntryHEX.delete(0, END)
         uproxCodeEntryHEX.insert(0, datahex.replace("0x", "", 1))
-        print(data, databin, databin2)
+        print(data)
+        print(databin)
+        print(databin2)
         mass = list(databin2)
         mass.pop(0)
         mass.pop(0)
@@ -410,6 +419,7 @@ def converttostopnetDEC():
 
 
 def converttouproxDEC():
+    print('converttouproxDEC')
     statusEntry.delete(0, END)
     uproxCodeEntryHEX.delete(0, END)
     uproxCodeEntryDEC.delete(0, END)
@@ -421,7 +431,9 @@ def converttouproxDEC():
         databin2 = bin(databin)
         stopNetCodeEntryHEX.delete(0, END)
         stopNetCodeEntryHEX.insert(0, datahex.replace("0x", "", 1))
-        print(data, databin, databin2)
+        print(data)
+        print(databin)
+        print(databin2)
         mass = list(databin2)
         mass.pop(0)
         mass.pop(0)
@@ -500,6 +512,7 @@ def converttouproxDEC():
         stmass.insert(61, mass[62])
         stmass.insert(62, mass[61])
         stmass.insert(63, mass[60])
+        print(stmass)
         datast_dec = str(int(''.join(stmass), 2))
         datast_hex = hex(int(''.join(stmass), 2))
         print(datast_dec)
